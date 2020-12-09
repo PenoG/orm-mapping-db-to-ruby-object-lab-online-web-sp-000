@@ -33,20 +33,14 @@ class Student
   end
   
   def self.all_students_in_grade_9
-    yes = []
-    
     sql = <<-SQL
       SELECT *
       FROM students
       WHERE name = ?
       LIMIT grade = 9
     SQL
- 
-    DB[:conn].execute(sql, name).map do |row|
-      yes << self.new_from_db(row)
-    end
     
-    yes
+    sql 
   end
   
   def save
