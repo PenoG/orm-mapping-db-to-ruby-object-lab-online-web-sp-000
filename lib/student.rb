@@ -32,7 +32,7 @@ class Student
     end.first
   end
   
-  def self.all_students_in_grade_9(name)
+  def self.all_students_in_grade_9
     yes = []
     
     sql = <<-SQL
