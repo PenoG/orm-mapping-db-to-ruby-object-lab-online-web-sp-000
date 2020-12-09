@@ -33,6 +33,8 @@ class Student
   end
   
   def self.all_students_in_grade_9(name)
+    yes = []
+    
     sql = <<-SQL
       SELECT *
       FROM students
@@ -41,8 +43,10 @@ class Student
     SQL
  
     DB[:conn].execute(sql, name).map do |row|
-      self.new_from_db(row)
+      yes << self.new_from_db(row)
     end
+    
+    yes
   end
   
   def save
