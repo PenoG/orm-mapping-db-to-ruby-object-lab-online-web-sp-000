@@ -37,7 +37,7 @@ class Student
       SELECT *
       FROM students
       WHERE name = ?
-      GROUP BY 
+      AND grade = 9
     SQL
     
     sql 
