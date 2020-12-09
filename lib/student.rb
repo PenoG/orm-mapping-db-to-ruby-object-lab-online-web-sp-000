@@ -40,7 +40,7 @@ class Student
       AND grade = 9
     SQL
     
-    sql 
+    sql
   end
   
   def save
