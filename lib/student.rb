@@ -37,7 +37,7 @@ class Student
       SELECT *
       FROM students
       WHERE name = ?
-      LIMIT grade = 9
+      GROUP BY 
     SQL
     
     sql 
